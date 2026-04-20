@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IonCore | AP Chemistry Master List</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --card-bg: #1c1c1e;
+            --accent: #007AFF;
+            --text-main: #FFFFFF;
+            --text-secondary: #86868b;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 1. Title */
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            margin: 0 0 12px 0;
+        }
+
+        /* 2. Introduction */
+        .intro {
+            font-size: 19px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin: 0 0 32px 0;
+        }
+
+        /* 3. Counter */
+        .counter-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        /* 4. Progress Bar */
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            width: 100%; /* All ions filled */
+            height: 100%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(0, 122, 255, 0.5);
+        }
+
+        /* Ion List Section */
+        .section-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 24px 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ion-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ion-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            background: #2c2c2e;
+        }
+
+        .formula {
+            font-family: "SF Mono", Menlo, monospace;
+            font-size: 19px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .name {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        sub, sup { font-size: 0.65em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>IonCore.</h1>
+    <p class="intro">Barron's AP Chemistry Essential Polyatomic Ions. Formatted for high-retention study.</p>
+    
+    <div class="counter-label">Ions Loaded: 20 / 20</div>
+    <div class="progress-track">
+        <div class="progress-fill"></div>
+    </div>
+
+    <div class="section-title">Common Ions</div>
+    <div class="ion-card">
+        <div class="formula">NH<sub>4</sub><sup>+</sup></div>
+        <div class="name">Ammonium</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">CO<sub>3</sub><sup>2-</sup></div>
+        <div class="name">Carbonate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">HCO<sub>3</sub><sup>-</sup></div>
+        <div class="name">Bicarbonate</div>
+    </div>
+
+    <div class="section-title">The Halogen Series</div>
+    <div class="ion-card">
+        <div class="formula">ClO<sub>4</sub><sup>-</sup></div>
+        <div class="name">Perchlorate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">ClO<sub>3</sub><sup>-</sup></div>
+        <div class="name">Chlorate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">ClO<sub>2</sub><sup>-</sup></div>
+        <div class="name">Chlorite</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">ClO<sub>-</sub></div>
+        <div class="name">Hypochlorite</div>
+    </div>
+
+    <div class="section-title">Nitrogen & Sulfur Family</div>
+    <div class="ion-card">
+        <div class="formula">NO<sub>3</sub><sup>-</sup></div>
+        <div class="name">Nitrate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">NO<sub>2</sub><sup>-</sup></div>
+        <div class="name">Nitrite</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">SO<sub>4</sub><sup>2-</sup></div>
+        <div class="name">Sulfate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">HSO<sub>4</sub><sup>-</sup></div>
+        <div class="name">Hydrogen sulfate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">SO<sub>3</sub><sup>2-</sup></div>
+        <div class="name">Sulfite</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">HSO<sub>3</sub><sup>-</sup></div>
+        <div class="name">Hydrogen sulfite</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">S<sub>2</sub>O<sub>3</sub><sup>2-</sup></div>
+        <div class="name">Thiosulfate</div>
+    </div>
+
+    <div class="section-title">Oxidizers & Transition Metals</div>
+    <div class="ion-card">
+        <div class="formula">MnO<sub>4</sub><sup>-</sup></div>
+        <div class="name">Permanganate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup></div>
+        <div class="name">Dichromate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">CrO<sub>4</sub><sup>2-</sup></div>
+        <div class="name">Chromate</div>
+    </div>
+
+    <div class="section-title">Phosphorus Family</div>
+    <div class="ion-card">
+        <div class="formula">PO<sub>4</sub><sup>3-</sup></div>
+        <div class="name">Phosphate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">HPO<sub>4</sub><sup>2-</sup></div>
+        <div class="name">Hydrogen phosphate</div>
+    </div>
+    <div class="ion-card">
+        <div class="formula">H<sub>2</sub>PO<sub>4</sub><sup>-</sup></div>
+        <div class="name">Dihydrogen phosphate</div>
+    </div>
+</div>
+
+</body>
+</html>
